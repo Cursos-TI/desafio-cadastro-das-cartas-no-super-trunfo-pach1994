@@ -1,7 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-#define QTD_CARTAS 2
 
 typedef struct {
     char estado;
@@ -14,44 +11,75 @@ typedef struct {
 } Carta;
 
 int main() {
-    Carta cartas[QTD_CARTAS];
+    Carta carta1, carta2;
 
-    for (int i = 0; i < QTD_CARTAS; i++) {
-        printf("\n--- Cadastro da Carta %d ---\n", i + 1);
+    printf("\n--- Cadastro da Carta 1 ---\n");
 
-        printf("Estado (A-H): ");
-        scanf(" %c", &cartas[i].estado);
+    printf("Estado (A-H): ");
+    scanf(" %c", &carta1.estado);
 
-        printf("Codigo da Carta (ex: A01): ");
-        scanf("%s", cartas[i].codigoCarta);
+    printf("Codigo da Carta (ex: A01): ");
+    scanf("%s", carta1.codigoCarta);
 
-        printf("Nome da Cidade: ");
-        scanf(" %[^\n]", cartas[i].nomeCidade);
+    printf("Nome da Cidade: ");
+    scanf(" %[^\n]", carta1.nomeCidade);
 
-        printf("Populacao: ");
-        scanf("%d", &cartas[i].populacao);
+    printf("Populacao: ");
+    scanf("%d", &carta1.populacao);
 
-        printf("Area (km²): ");
-        scanf("%f", &cartas[i].area);
+    printf("Area (km²): ");
+    scanf("%f", &carta1.area);
 
-        printf("PIB: ");
-        scanf("%f", &cartas[i].pib);
+    printf("PIB: ");
+    scanf("%f", &carta1.pib);
 
-        printf("Numero de Pontos Turisticos: ");
-        scanf("%d", &cartas[i].pontosTuristicos);
-    }
+    printf("Numero de Pontos Turisticos: ");
+    scanf("%d", &carta1.pontosTuristicos);
+
+
+    printf("\n--- Cadastro da Carta 2 ---\n");
+
+    printf("Estado (A-H): ");
+    scanf(" %c", &carta2.estado);
+
+    printf("Codigo da Carta (ex: A01): ");
+    scanf("%s", carta2.codigoCarta);
+
+    printf("Nome da Cidade: ");
+    scanf(" %[^\n]", carta2.nomeCidade);
+
+    printf("Populacao: ");
+    scanf("%d", &carta2.populacao);
+
+    printf("Area (km²): ");
+    scanf("%f", &carta2.area);
+
+    printf("PIB: ");
+    scanf("%f", &carta2.pib);
+
+    printf("Numero de Pontos Turisticos: ");
+    scanf("%d", &carta2.pontosTuristicos);
+
 
     printf("\n--- Dados das Cartas Cadastradas ---\n");
-    for (int i = 0; i < QTD_CARTAS; i++) {
-        printf("\nCarta %d:\n", i + 1);
-        printf("Estado: %c\n", cartas[i].estado);
-        printf("Codigo da Carta: %s\n", cartas[i].codigoCarta);
-        printf("Nome da Cidade: %s\n", cartas[i].nomeCidade);
-        printf("Populacao: %d\n", cartas[i].populacao);
-        printf("Area: %.2f km²\n", cartas[i].area);
-        printf("PIB: %.2f\n", cartas[i].pib);
-        printf("Pontos Turisticos: %d\n", cartas[i].pontosTuristicos);
-    }
+
+    printf("\nCarta 1:\n");
+    printf("Estado: %c\n", carta1.estado);
+    printf("Codigo da Carta: %s\n", carta1.codigoCarta);
+    printf("Nome da Cidade: %s\n", carta1.nomeCidade);
+    printf("Populacao: %d\n", carta1.populacao);
+    printf("Area: %.2f km²\n", carta1.area);
+    printf("PIB: %.2f\n", carta1.pib);
+    printf("Pontos Turisticos: %d\n", carta1.pontosTuristicos);
+
+    printf("\nCarta 2:\n");
+    printf("Estado: %c\n", carta2.estado);
+    printf("Codigo da Carta: %s\n", carta2.codigoCarta);
+    printf("Nome da Cidade: %s\n", carta2.nomeCidade);
+    printf("Populacao: %d\n", carta2.populacao);
+    printf("Area: %.2f km²\n", carta2.area);
+    printf("PIB: %.2f\n", carta2.pib);
+    printf("Pontos Turisticos: %d\n", carta2.pontosTuristicos);
 
     return 0;
 }
